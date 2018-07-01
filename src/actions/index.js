@@ -38,7 +38,6 @@ const parseCatsData = (data, savedCats) => {
 };
 
 export const fetchCats = (int = 20, savedCats) => {
-  console.log(int);
   return dispatch => {
     return fetch('https://www.reddit.com/r/cats/top/.json?limit=' + int)
       .then(response => response.json())
